@@ -85,7 +85,7 @@ function gameOver() {
         document.getElementById('youBrokeTheRecord').innerHTML = 'New high score!';
         document.getElementById('youBrokeTheRecord').style.backgroundColor = 'wheat';
     }
-    document.getElementById('highScore').innerHTML = 'The high score is ' + highScore + ' seconds!';
+    document.getElementById('highScore').innerHTML = 'The high score is ' + highScore.toFixed(2) + ' seconds!';
     document.getElementById('highScore').style.visibility = 'visible';
     clock.style.fontFamily = "Rock Salt";
     clock.style.fontSize = '30px';
