@@ -86,11 +86,12 @@ h2 {
 
 #playAgain {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     background-color: wheat;
     visibility: hidden;
     display: center;
     margin: auto;
     width: 100%;
+    font-family: "Rock Salt";
 }
 
