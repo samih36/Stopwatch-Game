@@ -21,7 +21,7 @@ h1, #instructionTitle, #instructions-row {
     display: none;
 }
 
-body {
+body, html {
     background-color: #3366ff;
 }
 

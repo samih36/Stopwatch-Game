@@ -75,7 +75,7 @@ document.onkeydown = () => {
         clock.style.visibility = 'visible';
         onTitlePage = false;
     } else if (!pressed && !letsReset) {
-    interval = window.setInterval(stopwatch, 15);
+    interval = window.setInterval(stopwatch, 16.5);
     pressed = true;
     firstTime = false;
     } else if (pressed && roundNumber < 4) {
