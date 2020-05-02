@@ -1,0 +1,82 @@
+.clockcontainer {
+    height: 300px;
+    width: 100%;
+}
+
+h1, #instructionTitle, #instructions-row {
+    background-color: wheat;
+}
+
+#clockdisplay {
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0px auto;
+    font-family: 'Times New Roman', Times, serif;
+    visibility: hidden;
+}
+
+.buttons {
+    text-align: center;
+    display: none;
+}
+
+body {
+    background-color: #3366ff;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Rock Salt";
+}
+
+h2 {
+    text-align: center;
+    font-family: "Rock Salt";
+    display: center;
+}
+
+.instructions-number {
+    padding-right: 25px;
+    font-family: "Rock Salt";
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  
+  .instructions-text {
+    padding: 10px;
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    width: 100%;
+  }
+
+  .instructions-row {
+    margin: auto;
+    width: 400px;
+  }
+
+#targetNumber {
+    text-align: center;
+    visibility: hidden;
+    padding-top: 40px;
+    font-size: 40px;
+}
+
+#round {
+    visibility: hidden;
+    font-size: 40px;
+    background-color: wheat;
+    background-size: auto;
+}
+
+#gameOverMessage {
+    visibility: hidden;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* note: Rock salt works well with open sans */
+
