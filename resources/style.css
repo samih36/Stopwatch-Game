@@ -7,6 +7,15 @@ h1, #instructionTitle, #instructions-row {
     background-color: wheat;
 }
 
+#highScore, #youBrokeTheRecord {
+    font-family: "Rock Salt";
+    font-size: 30px;
+    visibility: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
 #clockdisplay {
     width: 100%;
     font-size: 72px;
@@ -14,12 +23,9 @@ h1, #instructionTitle, #instructions-row {
     margin: 0px auto;
     font-family: 'Times New Roman', Times, serif;
     visibility: hidden;
+    padding-bottom: 30px;
 }
 
-.buttons {
-    text-align: center;
-    display: none;
-}
 
 body, html {
     background-color: #3366ff;
@@ -78,5 +84,13 @@ h2 {
     text-align: center;
 }
 
-/* note: Rock salt works well with open sans */
+#playAgain {
+    text-align: center;
+    font-size: 30px;
+    background-color: wheat;
+    visibility: hidden;
+    display: center;
+    margin: auto;
+    width: 100%;
+}
 

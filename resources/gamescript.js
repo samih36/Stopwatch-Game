@@ -13,6 +13,8 @@ let totalDifference = 0;
 let currentTarget = 0;
 let difference = 1;
 let congrats = false;
+let playAgainButton = document.getElementById('playAgain');
+let highScore = Number.MAX_VALUE;
 
 // TODO --> keep record of scores and display record at ending screen
 // make a play again button as well
@@ -48,15 +50,49 @@ function reset() {
     document.getElementById('clockdisplay').innerHTML = '0.0';
 }
 
+playAgainButton.onclick = () => {
+    playAgainButton.style.visibility = 'hidden';
+    document.getElementById('youBrokeTheRecord').style.display = 'none';
+    document.getElementById('targetNumber').style.display = "";
+    document.getElementById('round').style.display = "";
+    document.getElementById('round').style.width = '100%';
+    document.getElementById('round').style.textAlign = 'center';
+    roundNumber = 1;
+    document.getElementById('round').innerHTML = 'Round ' + roundNumber;
+    totalDifference = 0;
+    pressed = false;
+    letsReset = false;
+    decimals = 0;
+    seconds = 0;
+    document.getElementById('gameOverMessage').style.visibility = 'hidden';
+    document.getElementById('highScore').style.visibility = 'hidden';
+    clock.innerHTML = "0.0";
+    clock.style.fontSize = "72px";
+    clock.style.fontFamily = 'Times New Roman';
+    
+}
+
 function gameOver() {
     document.getElementById('targetNumber').style.display = 'none';
     document.getElementById('round').style.display = 'none';
     document.getElementById('gameOverMessage').innerHTML = "Congrats! The game is over";
     document.getElementById('gameOverMessage').style.visibility = 'visible';
-    clock.innerHTML = "The total difference was " + totalDifference.toFixed(2);
+    clock.innerHTML = "The total difference was " + totalDifference.toFixed(2) + ' seconds';
+    if (totalDifference < highScore) {
+        highScore = totalDifference;
+        document.getElementById('youBrokeTheRecord').style.display = "";
+        document.getElementById('youBrokeTheRecord').style.visibility = 'visible';
+        document.getElementById('youBrokeTheRecord').innerHTML = 'New high score!';
+        document.getElementById('youBrokeTheRecord').style.backgroundColor = 'wheat';
+    }
+    document.getElementById('highScore').innerHTML = 'The high score is ' + highScore + ' seconds!';
+    document.getElementById('highScore').style.visibility = 'visible';
     clock.style.fontFamily = "Rock Salt";
     clock.style.fontSize = '30px';
+    document.getElementById('playAgain').style.visibility = 'visible';
 }
+
+
 
 function compareTimeToTarget(target) {
     let clockTime = (100*seconds) + decimals;
