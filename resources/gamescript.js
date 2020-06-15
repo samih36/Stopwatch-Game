@@ -51,6 +51,8 @@ function reset() {
 }
 
 playAgainButton.onclick = () => {
+    currentTarget = generateTarget();
+    document.getElementById('targetNumber').innerHTML =  "Your target number is: " + currentTarget;
     playAgainButton.style.visibility = 'hidden';
     document.getElementById('youBrokeTheRecord').style.display = 'none';
     document.getElementById('targetNumber').style.display = "";
